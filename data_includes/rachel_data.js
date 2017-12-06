@@ -2,8 +2,8 @@ var theShuffle = rshuffle("c1", "c2", "c3", "c4", "c5", "c6")
 var theShuffle2 = rshuffle("c1-2", "c2-2", "c3-2", "c4-2", "c5-2", "c6-2")
 
 
-var shuffleSequence1 = seq("intro", sepWith("sep", seq("pracMsg", rshuffle("practice"), "realMsg", theShuffle, "break", theShuffle2)));
-var shuffleSequence2 = seq("intro", sepWith("sep", seq("pracMsg", rshuffle("practice"), "realMsg", theShuffle2, "break", theShuffle)));
+var shuffleSequence1 = seq("intro", sepWith("sep", seq("pracMsg", "sep", rshuffle("practice"), "realMsg", "sep", theShuffle, "break", "sep", theShuffle2)));
+var shuffleSequence2 = seq("intro", sepWith("sep", seq("pracMsg", "sep", rshuffle("practice"), "realMsg", "sep", theShuffle2, "break", "sep", theShuffle)));
 
 function chooseShuffle(){
    i = Math.floor(Math.random() * 2);
@@ -43,7 +43,8 @@ var defaults = [
         timeout: 3000
     },
     "Message", {
-        hideProgressBar: true
+        hideProgressBar: true,
+        transfer: "click"
     },
     "Form", {
         hideProgressBar: true,
@@ -79,9 +80,9 @@ var items = [
       html: { include: "questionnaire.html"}
     }],
 
-    ["pracMsg", "Message", {html: {include: "instr1.html"}, transfer: "keypress"}],
-    ["realMsg", "Message", {html: {include: "instr2.html"}, transfer: "keypress"}],
-    ["break", "Message", {html: {include: "break.html"}, transfer: "keypress"}],
+    ["pracMsg", "Message", {html: {include: "instr1.html"}, transfer: "click"}],
+    ["realMsg", "Message", {html: {include: "instr2.html"}, transfer: "click"}],
+    ["break", "Message", {html: {include: "break.html"}, transfer: "click"}],
 
 
 
