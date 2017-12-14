@@ -2,8 +2,9 @@ var theShuffle = rshuffle("c1", "c2", "c3", "c4", "c5", "c6")
 var theShuffle2 = rshuffle("c1-2", "c2-2", "c3-2", "c4-2", "c5-2", "c6-2")
 
 
-var shuffleSequence1 = seq("intro", sepWith("sep", seq("pracMsg", "sep", rshuffle("practice"), "realMsg", "sep", theShuffle, "break", "sep", theShuffle2)));
-var shuffleSequence2 = seq("intro", sepWith("sep", seq("pracMsg", "sep", rshuffle("practice"), "realMsg", "sep", theShuffle2, "break", "sep", theShuffle)));
+var shuffleSequence1 = seq("intro", sepWith("sep", seq("pracMsg", "prep", rshuffle("practice"), "realMsg", "prep", theShuffle, "break", "prep", theShuffle2, "lastPage")));
+var shuffleSequence2 = seq("intro", sepWith("sep", seq("pracMsg", "prep", rshuffle("practice"), "realMsg", "prep", theShuffle2, "break", "prep", theShuffle, "lastPage")));
+
 
 function chooseShuffle(){
    i = Math.floor(Math.random() * 2);
@@ -38,7 +39,7 @@ var defaults = [
     },
     "Question", {
         randomOrder: false,
-        as: [['f', 'en'], ['h', 'et'], ['j', 'ei'],],
+        as: [['t', 'et'], ['n', 'en'], ['i', 'ei'],],
         presentHorizontally: true,
         timeout: 3000
     },
@@ -66,16 +67,16 @@ var items = [
     //
     //["sr", "__SendResults__", { }],
 
-    ["sep", "Separator", { }],
     ["sep", "Separator", {normalMessage: "+"}],
+    ["prep", "Separator", {transfer: 3000, normalMessage: ""}],
 
     ["intro", "Message", {
       html: { include: "intro.html"}
     }],
 
-    ["intro", "Form", {
-      html: { include: "ConsentFormRevised.html"}
-    }],
+    // ["intro", "Form", {
+    //   html: { include: "ConsentFormRevised.html"}
+    // }],
     ["intro", "Form", {
       html: { include: "questionnaire.html"}
     }],
@@ -83,6 +84,7 @@ var items = [
     ["pracMsg", "Message", {html: {include: "instr1.html"}, transfer: "click"}],
     ["realMsg", "Message", {html: {include: "instr2.html"}, transfer: "click"}],
     ["break", "Message", {html: {include: "break.html"}, transfer: "click"}],
+    ["lastPage", "Message", {html: {include: "lastPage.html"}, transfer: "click"}],
 
 
 
