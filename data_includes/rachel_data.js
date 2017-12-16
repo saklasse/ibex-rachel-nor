@@ -2,8 +2,9 @@ var theShuffle = rshuffle("c1", "c2", "c3", "c4", "c5", "c6")
 var theShuffle2 = rshuffle("c1-2", "c2-2", "c3-2", "c4-2", "c5-2", "c6-2")
 
 
-var shuffleSequence1 = seq("intro", sepWith("sep", seq("pracMsg", "prep", rshuffle("practice"), "realMsg", "prep", theShuffle, "break", "prep", theShuffle2, "lastPage")));
-var shuffleSequence2 = seq("intro", sepWith("sep", seq("pracMsg", "prep", rshuffle("practice"), "realMsg", "prep", theShuffle2, "break", "prep", theShuffle, "lastPage")));
+var shuffleSequence1 = seq("intro", sepWith("sep", seq("pracMsg", "prep", rshuffle("practice"), "realMsg", "prep", theShuffle, "break", "prep", theShuffle2, "sr", "lastPage")));
+var shuffleSequence2 = seq("intro", sepWith("sep", seq("pracMsg", "prep", rshuffle("practice"), "realMsg", "prep", theShuffle2, "break", "prep", theShuffle, "sr", "lastPage")));
+
 
 
 function chooseShuffle(){
@@ -65,7 +66,7 @@ var items = [
     // the shuffle sequence, you must set the 'manualSendResults' configuration variable to 'true', since
     // otherwise, results are automatically sent at the end of the experiment.
     //
-    //["sr", "__SendResults__", { }],
+    ["sr", "__SendResults__", { }],
 
     ["sep", "Separator", {normalMessage: "+"}],
     ["prep", "Separator", {transfer: 3000, normalMessage: ""}],
@@ -74,9 +75,9 @@ var items = [
       html: { include: "intro.html"}
     }],
 
-    // ["intro", "Form", {
-    //   html: { include: "ConsentFormRevised.html"}
-    // }],
+    ["intro", "Form", {
+      html: { include: "ConsentFormRevised.html"}
+    }],
     ["intro", "Form", {
       html: { include: "questionnaire.html"}
     }],
@@ -84,7 +85,7 @@ var items = [
     ["pracMsg", "Message", {html: {include: "instr1.html"}, transfer: "click"}],
     ["realMsg", "Message", {html: {include: "instr2.html"}, transfer: "click"}],
     ["break", "Message", {html: {include: "break.html"}, transfer: "click"}],
-    ["lastPage", "Message", {html: {include: "lastPage.html"}, transfer: "click"}],
+    ["lastPage", "Message", {html: {include: "lastPage.html"}, transfer: null}],
 
 
 
