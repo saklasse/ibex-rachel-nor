@@ -74,10 +74,6 @@ var items = [
     ["intro", "Message", {
       html: { include: "intro.html"}
     }],
-
-    ["intro", "Form", {
-      html: { include: "ConsentFormRevised.html"}
-    }],
     ["intro", "Form", {
       html: { include: "questionnaire.html"}
     }],
