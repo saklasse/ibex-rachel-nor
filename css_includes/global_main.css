@@ -494,10 +494,6 @@ span.retry:visited {
 }
 
 
-/*.tha-table tr td:first-child {
-  background: red;
-}*/
-
 .padding-left-20 {
   padding-left: 20px;
 }
@@ -515,4 +511,9 @@ span.retry:visited {
 
 .wisconsin-q label input {
   margin-right: 10px;
+  position: relative;
+}
+
+.tw-table td:nth-child(9) {
+  margin-top: 5em;
 }
