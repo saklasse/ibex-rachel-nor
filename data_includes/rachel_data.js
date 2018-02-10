@@ -1,11 +1,9 @@
-var theShuffle = rshuffle("c1", "c2", "c3", "c4", "c5", "c6")
-var theShuffle2 = rshuffle("c1-2", "c2-2", "c3-2", "c4-2", "c5-2", "c6-2")
+var theShuffle = rshuffle2("c1", "c2", "c3", "c4", "c5", "c6")
+var theShuffle2 = rshuffle2("c1-2", "c2-2", "c3-2", "c4-2", "c5-2", "c6-2")
 
 
 var shuffleSequence1 = seq("intro", sepWith("sep", seq("pracMsg", "prep", rshuffle("practice"), "realMsg", "prep", theShuffle, "break", "prep", theShuffle2, "sr", "lastPage")));
 var shuffleSequence2 = seq("intro", sepWith("sep", seq("pracMsg", "prep", rshuffle("practice"), "realMsg", "prep", theShuffle2, "break", "prep", theShuffle, "sr", "lastPage")));
-
-
 
 function chooseShuffle(){
    i = Math.floor(Math.random() * 2);
@@ -42,7 +40,7 @@ var defaults = [
         randomOrder: false,
         as: [['t', 'et'], ['n', 'en'], ['i', 'ei'],],
         presentHorizontally: true,
-        timeout: 3000
+        timeout: 3500
     },
     "Message", {
         hideProgressBar: true,

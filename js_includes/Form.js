@@ -46,6 +46,7 @@ jqueryWidget: {
         var HAS_LOADED = false;
 
         function handleClick(dom) {
+	    scroll(0,0)
             return function (e) {
                 var answerTime = new Date().getTime();
 
