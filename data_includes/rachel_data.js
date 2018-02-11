@@ -66,7 +66,7 @@ var items = [
     //
     ["sr", "__SendResults__", { }],
 
-    ["sepStart1", "Separator", {normalMessage: "Starter i...", transfer: 1000 }],
+    ["sepStart1", "Separator", {normalMessage: "Starter om...", transfer: 1000 }],
     ["sepStart2", "Separator", {normalMessage: "3...", transfer: 1000 }],
     ["sepStart3", "Separator", {normalMessage: "2...", transfer: 1000 }],
     ["sepStart4", "Separator", {normalMessage: "1...", transfer: 1000 }],
