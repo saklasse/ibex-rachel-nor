@@ -19,13 +19,13 @@ jqueryWidget: {
         this.saveReactionTime = dget(this.options, "saveReactionTime", false);
         this.obligatoryErrorGenerator =
             dget(this.options, "obligatoryErrorGenerator",
-                 function (field) { return "This field is obligatory."; });
+                 function (field) { return "Du må svare på alle spørsmål som er merket med *"; });
         this.obligatoryCheckboxErrorGenerator =
             dget(this.options, "obligatoryCheckboxErrorGenerator",
-                 function (field) { return "You must check this checkbox to continue."; });
+                 function (field) { return "Du må svare på alle spørsmål som er merket med *"; });
         this.obligatoryRadioErrorGenerator =
             dget(this.options, "obligatoryRadioErrorGenerator",
-                 function (field) { return "You must select an option."; });
+                 function (field) { return "Du må svare på alle spørsmål som er merket med *"; });
 
         var t = this;
 
