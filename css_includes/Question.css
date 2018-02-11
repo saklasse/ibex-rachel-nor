@@ -24,7 +24,7 @@ li.scale-box {
     padding-left: 0;
     margin-right: 5em;
     padding-right: 0;
-    border: 1px #9ea4b1 solid;
+    border: 0px #9ea4b1 solid;
     width: 2em;
     height: 2em;
     padding-top: 0.5em;
@@ -52,7 +52,7 @@ li.scale-box a:hover {
     vertical-align: middle;
 }
 span.fake-link {
-    color: black;
+    color: white;
     font-weight: bold;
     cursor: pointer;
 }
